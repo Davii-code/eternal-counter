@@ -1,0 +1,102 @@
+.romantic-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 900px;
+  background: linear-gradient(135deg, #000000, #8B0000);
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  font-family: 'Dancing Script', cursive, 'Roboto', sans-serif;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  animation: fadeIn 1.5s ease-in-out;
+  overflow: hidden;
+
+  .header {
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      color: #ff0000;
+      animation: pulse 2.5s infinite;
+    }
+
+    .inspirational-quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: #f1e1e1;
+      margin-bottom: 20px;
+    }
+  }
+
+  .timer {
+    font-size: 1.8rem;
+    color: #f1e1e1;
+    margin: 20px 0;
+
+    p {
+      margin: 10px 0;
+    }
+
+    strong {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    strong:hover {
+      transform: scale(1.2);
+    }
+  }
+
+}
+
+/* Animações */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .romantic-counter {
+    padding: 20px;
+
+    .header h1 {
+      font-size: 2.5rem;
+    }
+
+    .timer {
+      font-size: 1.5rem;
+
+      strong {
+        font-size: 1.8rem;
+      }
+    }
+
+    .reset-button {
+      font-size: 1.5rem;
+    }
+  }
+}
